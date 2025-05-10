@@ -35,21 +35,13 @@ console.log(logItems(['Mango', 'Poly', 'Ajax']));
 // і повертає ціну гравіювання всіх слів в рядку.
   
 
-const calculateEngravingPrice = function (message, pricePerWord) {
-    const srtingLength = message.split(' ');
-    const arrayLength = srtingLength.length;
-    const result = `Ціна гравіювання становить ${arrayLength * pricePerWord} гривень`;
-    return result;
-}
-
-console.log(calculateEngravingPrice("Hello world! I love JavaScript!", 15));
-
 function calculateEngravingPrice(message, pricePerWord) {
-    const words = message.split(' ');
-    return words.length * pricePerWord;
-  }
+  const getWord = message.split(" ");
+  const priceWord = getWord.length * pricePerWord;
+  return priceWord;
+}
   
-
+  console.log(calculateEngravingPrice("Hello world! I love JavaScript!", 15));
   console.log(calculateEngravingPrice('Best Taras', 10));
   console.log(calculateEngravingPrice('Happy Birthday Nazar', 20)); 
   
